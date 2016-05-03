@@ -10,4 +10,9 @@ class StaffMember < ActiveRecord::Base
       self.hashed_password = nil
     end
   end
+  
+  def suspend?
+    self.suspended
+  end
+  
 end

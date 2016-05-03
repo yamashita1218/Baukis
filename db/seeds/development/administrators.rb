@@ -1,4 +1,4 @@
-Administrators.create!(
-  email: 'hanako@example.com',
-  password: 'foobar',
+Administrator.create!(
+  email: 'admin@example.com',
+  password: 'hoge'
 )
