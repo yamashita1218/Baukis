@@ -5,7 +5,6 @@ class Admin::Authenticator
   
   def authenticate(raw_password)
     @administrator &&
-      @administrator.hashed_password &&
-      !@administrator.suspended?
+      @administrator.hashed_password
   end
 end

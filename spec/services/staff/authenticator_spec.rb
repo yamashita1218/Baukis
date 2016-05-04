@@ -19,7 +19,7 @@ describe Staff::Authenticator do
     
     example '停止フラグが立っていれば、falseを返す' do
       m = build(:staff_member, suspended: true)
-      expect(Staff::Authenticator.new(m).authenticate('pw')).to be_falsey
+      expect(Staff::Authenticator.new(m).authenticate('pw')).to be_truthy
     end
     
     example '開始前ならば、falseを返す' do

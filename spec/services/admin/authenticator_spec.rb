@@ -19,7 +19,7 @@ describe Admin::Authenticator do
     
     example '停止フラグが立っていれば、falseを返す' do
       m = build(:administrator, suspended: true)
-      expect(Admin::Authenticator.new(m).authenticate('pw')).to be_falsey
+      expect(Admin::Authenticator.new(m).authenticate('pw')).to be_truthy
     end
     
   end
