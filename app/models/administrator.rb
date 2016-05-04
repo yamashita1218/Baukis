@@ -11,7 +11,11 @@ class Administrator < ActiveRecord::Base
     end
   end
   
-  def suspend?
+  def suspended?
     self.suspended
   end
+
+  def active?
+    !suspended?
+  end  
 end
